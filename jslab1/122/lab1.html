@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head><h1>Inventory Management System</h1></head>
+</br>
+<body><h1>"Dell. Purely You"</h1>
+<script>
+	class Dell{
+		constructor(id,name,quantity){
+			this.id=id;
+			this.name=name;
+			this.quantity=quantity;
+			this.show=function() {
+				return "DELL"
+			}
+		}
+		display() {
+			return "Manufatured in Chennai Imported from Bangalore." 
+		}
+	}
+	var item1=new Dell("101","desktop","10");
+	var item2=new Dell("102","mouse","10");
+	var item3=new Dell("103","keyboard","10");
+	var item4=new Dell("104","speaker","10");
+	var item5=new Dell("105","printer","10");
+
+	document.write("Item_id : " +item1.id+ "</br>" + "I_Name : " +item1.name+ "</br>" + "Quantity : " +item1.quantity+ "</br>" + "Brand_Name : " +item1.show()+"</br>"+"Manufactutre_info : " +item1.display()+ "</br></br></br>");
+	document.write("Item_id : " +item2.id+ "</br>" + "I_Name : " +item2.name+ "</br>" + "Quantity : " +item2.quantity+ "</br>" + "Brand_Name : " +item2.show()+ "</br>" +"Manufacture_info : " +item2.display()+ "</br></br></br>");
+	document.write("Item_id : " +item3.id+ "</br>" + "I_Name : " +item3.name+ "</br>" + "Quantity : " +item3.quantity+ "</br>" + "Brand_Name : " +item3.show()+ "</br>" +"Manufacture_info : " +item3.display()+ "</br></br></br>");
+	document.write("Item_id : " +item4.id+ "</br>" + "I_Name : " +item4.name+ "</br>" + "Quantity : " +item4.quantity+ "</br>" + "Brand_Name : " +item4.show()+ "</br>" +"Manufacture_info : " +item4.display()+ "</br></br></br>");
+	document.write("Item_id : " +item5.id+ "</br>" + "I_Name : " +item5.name+ "</br>" + "Quantity : " +item5.quantity+ "</br>" + "Brand_Name : " +item5.show()+ "</br>" +"Manufacture_info : " +item5.display()+ "</br></br></br>");
+
+</script>
+</body>
+</html> 

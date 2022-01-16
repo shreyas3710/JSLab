@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+    <head> <h1>DELL</h1></head> </br>
+    <body>
+        <script>
+        function factfun(idn,name,price,quantity){
+            return{
+                idn,name,price,quantity,
+                product(){
+
+                    return total=price*quantity;
+                }
+            }
+        }
+        var item1 =factfun('101','desktop',Number(prompt("Enter the product price for desktop")),10);
+        var item2 =factfun('102','mouse',Number(prompt("Enter the product price mouse")),10);
+        var item3 =factfun('103','keyboad',Number(prompt("Enter the product price keyboard")),10);
+        var item4 =factfun('104','speaker',Number(prompt("Enter the product price speaker")),10);
+        var item5 =factfun('105','printer',Number(prompt("Enter the product price printer")),10);
+
+        
+        document.write("Product ID:"+item1.idn + "</br>" + "Product Name:"+item1.name + "</br>" + "Product price:"+item1.price + "</br>"+  "Product Quantity:"+item1.quantity  + "</br>" +"Total:"+item1.product()+ "</br>" +"<hr>" + "</br>");
+        document.write("Product ID:"+item2.idn + "</br>" + "Product Name:"+item2.name + "</br>" + "Product price:"+item2.price + "</br>" + "Product Quantity:"+item2.quantity  + "</br>" +"Total:"+item2.product()+ "</br>" +"<hr>" + "</br>");
+        document.write("Product ID:"+item3.idn + "</br>" + "Product Name:"+item3.name + "</br>" + "Product price:"+item3.price + "</br>" + "Product Quantity:"+item3.quantity  + "</br>" +"Total:"+item3.product()+ "</br>" +"<hr>" + "</br>");
+        document.write("Product ID:"+item4.idn + "</br>" + "Product Name:"+item4.name + "</br>" + "Product price:"+item4.price + "</br>" + "Product Quantity:"+item4.quantity  + "</br>" +"Total:"+item4.product()+ "</br>" +"<hr>" + "</br>");
+        document.write("Product ID:"+item5.idn + "</br>" + "Product Name:"+item5.name + "</br>" + "Product price:"+item5.price + "</br>" + "Product Quantity:"+item5.quantity  + "</br>" +"Total:"+item5.product()+ "</br>" +"<hr>" + "</br>");
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+    <head> <h1 align="center">Inventory Management</h1></head> </br>
+    <body>
+        <script>
+        function factfun(idn,name,price,quantity){
+            return{
+                idn,name,price,quantity,
+                product(){
+                    //return `Product ID:${idn}<br>Product Name:${name}<br>Product Price: ${price}<br>Product Quantity:${quantity}<br>Total:${total}<br><hr>`
+                    return total=price*quantity;
+                }
+            }
+        }
+        var item1 =factfun('A001','Mobile',Number(prompt("Enter the product price for Mobile")),10);
+        var item2 =factfun('A002','Earphones',Number(prompt("Enter the product price Earphones")),5);
+        var item3 =factfun('A003','Mouse',Number(prompt("Enter the product price Mouse")),5);
+
+        document.write("<center>"+"Product ID:"+item1.idn + "</br>" + "Product Name:"+item1.name + "</br>" + "Product price:"+item1.price  + "</br>" +"Product Quantity:"+item1.quantity  + "</br>" +"Total:"+item1.product()+ "</br>" +"<hr>" + "</br>");
+        document.write("<center>"+"Product ID:"+item2.idn + "</br>" + "Product Name:"+item2.name + "</br>" + "Product price:"+item2.price + "</br>" +"Product Quantity:"+item2.quantity  + "</br>"  +"Total:"+item2.product()+ "</br>" +"<hr>" + "</br>");
+        document.write("<center>"+"Product ID:"+item3.idn + "</br>" + "Product Name:"+item3.name + "</br>" + "Product price:"+item3.price + "</br>" + "Product Quantity:"+item3.quantity  + "</br>" +"Total:"+item3.product()+ "</br>" +"<hr>" + "</br>");
+
+        </script>
+    </body>
+
+
+</html>
