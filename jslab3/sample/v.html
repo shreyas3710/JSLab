@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Checkup</title>
+    <script src="v.js"></script>
+</head>
+
+<body align="center" bgcolor="lightblue">
+<form name="infoForm" onsubmit="return validateForm()" action="" method="post">
+    <h2>Application Form</h2>
+    <div class="row">
+        <label>Name:      </label>
+        <input type="text" name="name">
+        <div class="error" id="nameError"></div>
+    </div><br>
+    <div class="row">
+        <label>Address:  </label>
+        <input type="text" name="address">
+        <div class="error" id="addressError"></div>
+    </div><br>
+    <div class="row">
+        <label>Vehicle_type:  </label>
+        <select name="vehicletype">
+            <option>Select</option>
+            <option>Bike</option>
+            <option>Cars</option>
+            <option>Van</option>
+            <option>Tractor</option>
+            <option>Jeep</option>
+        </select>
+        <div class="error" id="vehicleError"></div>
+    </div><br>
+    <div class="row">
+        <label>City:     </label>
+        <select name="city">
+            <option>Select</option>
+            <option>Tumkur</option>
+            <option>Mangalore</option>
+            <option>Hassan</option>
+            <option>Coorg</option>
+        </select>
+        <div class="error" id="cityError"></div>
+    </div><br>
+    <div class="row">
+        <label>Type of Insurance: </label>
+        <div class="form-inline">
+            <label><input type="checkbox" name="insurance[]" value="Third-party Libality Insurance"> Third-party Libality Insurance</label>
+            <label><input type="checkbox" name="insurance[]" value="Comprehensive Insurance"> Comprehensive Insurance</label>
+        </div>
+        <div class="error" id="insuranceError"></div>
+    </div><br>
+     <div class="row">
+        <label>Mobile Number:  </label>
+        <input type="text" name="mobile" >
+        <div class="error" id="mobileError"></div>
+    </div><br>
+    <div class="row">
+        <label>Email Address:  </label>
+        <input type="text" name="email">
+        <div class="error" id="emailError"></div>
+    </div><br>
+    <div class="row">
+        <label>Aadhar Number:  </label>
+        <input type="text" name="aadhar" maxlength="14">
+        <div class="error" id="aadharError"></div>
+    </div><br>
+    <div class="row">
+        <input type="submit" value="Submit">
+    </div><br>
+</form>
+</body>
+
+</html>
