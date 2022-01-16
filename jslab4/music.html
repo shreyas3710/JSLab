@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel ="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <title>Music class</title>
+        <style>
+            body{
+                background-color:rgb(220, 241, 241);
+            }
+            .button1:hover {
+                background-color: #4CAF50;
+                color: white;
+            }
+            body{
+                font-family:Arial, Helvetica, sans-serif;
+                text-shadow: whitesmoke;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container" align="center">
+            <h1>Music school Registration form</h1>
+        </div><br>
+            <hr>
+            <form id="form" name="validateapi" onsubmit="validateForm()">
+            <div class="container-fluid">
+            <div class="row">
+            <div class="col-md-6">
+            
+            <b><label>Name: </label></b><br>
+            <input type="text" placeholder="first name" name="fname" id="fname" maxlength="25" pattern="[A-za-z]+" required/>&nbsp;&nbsp;
+            <input type="text" placeholder="last name" name="lname" id="lname" minlength="2" maxlength="15" pattern="[A-za-z]+" required/><br><br>
+            
+            <b><label>Date of birth: </label></b><br>
+            <input type="date" placeholder="DOB" name="dob" id="dob" max="2005-01-01" required/><br><br>
+            
+            <b><label>Age: </label></b><br>
+            <input type="number" placeholder="Age" name="age" id="age" min="15" max="38" required/><br><br>
+            
+            <label><b>Address:</b></label><br>
+            <textarea placeholder="Address" name="address" rows="3" cols="40" id="address" minlength="8" required/></textarea><br><br>
+            
+            <b><label>Phone No:</label></b><br>
+            <input placeholder="P-No" type="text" name="phone" id="phone" pattern="[0-9]{10}" required/>
+        </div>
+
+            <br><br>
+            <div class="col-md-6">
+            <b><label>Pick for classes:</label></b>&nbsp;&nbsp;<br>
+            <input type="checkbox" id="mon" name="mon" value="Monday"><label for="mon">Monday</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="checkbox" id="tue" name="tue" value="Tuesday"><label for="tue">Tuesday</label><br>
+            <input type="checkbox" id="wed" name="wed" value="Wednesday"><label for="wed">Wednesday</label>
+            <input type="checkbox" id="thr" name="thr" value="Thursday"><label for="thr">Thursday</label><br>
+            <input type="checkbox" id="fri" name="fri" value="Friday"><label for="fri">Friday</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="checkbox" id="sat" name="sat" value="Saturday"><label for="sat">Saturday</label><br>
+            <br>
+
+            <b><label for="Music">Choice of Instrument:</label></b>
+                <select id="Music" >
+                    <option value="Music">Choose</option>
+                    <option value="Music">Piano</option>
+                    <option value="Music">Drums</option>
+                    <option value="Music">Violin</option>
+                    <option value="Music">Guitar</option>
+                    <option value="Music">Flute</option>
+                    <option value="Music">Saxophone</option>
+
+                </select><br><br>
+
+            <div class="row">
+            <div class="col-md-4">    
+            <b><label>Duration of classes:</label></b><br>
+            <input type="radio" name="c" required/><label>1 hrs</label><br>
+            <input type="radio" name="c" required/><label>1.5 hrs</label><br>
+            <input type="radio" name="c" required/><label>2 hrs</label><br>
+            <br>
+            </div>
+            <div class="col-md-8">
+            <b><label>Tution fees for respective classes:</label></b><br>
+            <input type="radio" name="f" required/><label>Rs.5000</label><br>
+            <input type="radio" name="f" required/><label>Rs.10000</label><br>
+            <input type="radio" name="f" required/><label>Rs.15000</label><br>
+            <br>
+            </div>
+            </div>
+            
+            <button type="submit" class="button button1" onsubmit="validateForm()">Register</button>
+            <br>
+            
+        </div>
+        </div>
+        </div>
+        </form>
+        <br>
+        <br>
+
+        <script>
+            
+            const fname = document.getElementById("fname");
+            name.addEventListener("input", () => {
+                name.setCustomValidity("");
+                name.checkValidity();
+            });
+            name.addEventListener("invalid", () => {
+            if (name.value === "") {
+                name.setCustomValidity("Please enter a fname");
+            } 
+            else {
+                name.setCustomValidity("Enter only Uppercase and lowercase characters");
+            }
+            });
+
+
+
+             
+             const lname = document.getElementById("lname");
+            name.addEventListener("input", () => {
+                name.setCustomValidity("");
+                name.checkValidity();
+            });
+            name.addEventListener("invalid", () => {
+            if (name.value === "") {
+                name.setCustomValidity("Please enter a lname");
+            } 
+            else {
+                name.setCustomValidity("Enter only Uppercase and lowercase characters ");
+            }
+            });
+
+            const DOB = document.getElementById("dob");
+			DOB.addEventListener("input", () => {
+				DOB.setCustomValidity("");
+				DOB.checkValidity();
+			});
+			DOB.addEventListener("invalid", () => {
+				if (DOB.value === "") {
+					DOB.setCustomValidity("Please enter your DOB");
+				} else {
+					DOB.setCustomValidity("Enter a Valid DOB");
+				}
+			});
+
+            
+
+            const age = document.getElementById("age");
+			age.addEventListener("input", () => {
+				age.setCustomValidity("");
+				age.checkValidity();
+			});
+			age.addEventListener("invalid", () => {
+				if (age.value === "") {
+					age.setCustomValidity("Please enter an Age");
+				} else {
+					age.setCustomValidity("Enter a Valid age");
+				}
+			});
+
+
+             
+             const address = document.getElementById("address");
+			address.addEventListener("input", () => {
+				address.setCustomValidity("");
+				address.checkValidity();
+			});
+			address.addEventListener("invalid", () => {
+				if (address.value === "") {
+					address.setCustomValidity("Please enter an address");
+				} 
+                else {
+					address.setCustomValidity("Enter a Valid Address");
+				}
+			});
+
+
+            
+            const phone = document.getElementById("phone");
+			phone.addEventListener("input", () => {
+				phone.setCustomValidity("");
+				phone.checkValidity();
+			});
+			phone.addEventListener("invalid", () => {
+				if (phone.value === "") {
+					phone.setCustomValidity("Please enter a Phone Number");
+				} else {
+					phone.setCustomValidity("Enter a Valid Phone number");
+				}
+			});
+
+        </script>
+        <footer><h3 align="center">Thank you for joining music school!</h3></footer>
+
+    </body>
+</html>
